@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/christmas-tree.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Christmas Countdown</title>
+</head>
+
+<body>
+    <div id="container" class="my-container snow">
+        <ul id="christmas_scene" class="christmas-scene">
+            <li>
+                <div class="layer-photo"></div>
+            </li>     
+            <li class="layer">
+                <div class="layer-1 layer-photo"></div>
+            </li>
+        </ul>
+        <div id="countdown_container" class="countdown-container">
+            <div class="countdown-garland days">
+                <div class="number"></div>
+                <div class="title">Giorni</div>
+            </div>
+            <div class="countdown-garland hours">
+                <div class="number"></div>
+                <div class="title">Ore</div>
+            </div>
+            <div class="countdown-garland minutes">
+                <div class="number"></div>
+                <div class="title">Minuti</div>
+            </div>
+            <div class="countdown-garland seconds">
+                <div class="number"></div>
+                <div class="title">Secondi</div>
+            </div>
+        </div>
+        <div class="merry-christmas-text">Buon Natale</div>
+        <img src="img/christmas-tree.png" alt="christmas-tree" class="christmas-tree">
+        <canvas id='snow' class="snow"></canvas>
+    </div>
+    <div class="loader">
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

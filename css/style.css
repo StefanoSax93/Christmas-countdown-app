@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Parisienne&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    background-color: var(--white);
+    line-height: 1.428;
+    color: var(--white);
+}
+
+#container.my-container {
+    position: relative;
+    max-width: 2560px;
+    max-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgb(100, 7, 7) 0%, rgb(177, 28, 28) 60%, rgb(248, 7, 7) 100%);
+}
+
+#container .christmas-scene {
+    position: relative;
+}
+
+#container .christmas-scene::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: url(../img/ghirlanda-top.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 10;
+} 
+
+.christmas-scene .layer {
+    width: 100%;
+    position: absolute;
+    transform: translate3d(0px, 0px, 0px);
+    left: 0;
+    bottom: 0;
+}
+
+.christmas-scene .layer-photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 78.9rem;
+}
+
+.christmas-scene .layer-1 {
+    background-image: url(../img/jumbotron.png);
+    background-position: 36% bottom;
+    transform: translateY(-70px);
+}
+
+.countdown-container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+    width: 100%;
+}
+
+.countdown-container .countdown-garland {
+    height: 20rem;
+    text-align: center;
+    padding-top: 10rem;
+    line-height: 1.3;
+    z-index: 2;
+    flex-basis: 25%;
+}
+
+.countdown-container .countdown-garland div {
+    font-size: 2rem;
+}
+
+#container .merry-christmas-text {
+    font-family: 'Parisienne', cursive;
+    position: absolute;
+    top: 21rem;
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    z-index: 99;
+}
+
+#container .christmas-tree {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    width: 26.25rem;
+    margin-left: -13.125rem;
+}
+
+.snow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(100, 7, 7) 0%, rgb(177, 28, 28) 60%, rgb(248, 7, 7) 100%);
+    z-index: 99;
+    overflow: hidden;
+}
+
+.loader::after {
+    content: "";
+    position: absolute;
+    background: url(../img/snowflake.png) no-repeat;
+    background-size: contain;
+    width: 10rem;
+    aspect-ratio: 1/1;
+    margin-left: -3.5rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: snowflake-rotate 2s linear infinite;
+}
+
+.loader.fade-out {
+    top: 110%;
+    opacity: 0;
+}
+
+@keyframes snowflake-rotate {
+    0% {
+        transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@media(min-width:565px) {
+    .countdown-container {
+        width: 60rem;
+        margin-left: -30rem;
+        left: 50%;
+        font-size: 4rem;
+    }
+
+    .countdown-container .countdown-garland {
+        padding-top: 13rem;
+    }
+
+    .countdown-container .countdown-garland div {
+        font-size: 1.8rem;
+        padding-left: 1.5rem;
+    }
+
+    .countdown-container .countdown-garland::after {
+        content: '';
+        background: url('../img/ghirlanda.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        margin-left: -8rem;
+        top: 7rem;
+        z-index: -1;
+    }
+
+    #container .merry-christmas-text {
+        top: 25rem;
+        font-size: 8rem;
+    }
+}
