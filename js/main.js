@@ -3,7 +3,7 @@ let days = document.querySelector('.days .number'),
     minutes = document.querySelector('.minutes .number'),
     seconds = document.querySelector('.seconds .number'),
     //Natale
-    countDownDate = new Date("Dec 24, 2022 23:59:59").getTime();
+    countDownDate = new Date("Dec 24, 2023 23:59:59").getTime();
 
 let counter = setInterval(() => {
     //Data odierna
@@ -33,7 +33,7 @@ function loader() {
 }
 
 function fadeOut() {
-    setInterval(loader, 3000);
+    setInterval(loader, 5000);
 }
 
 window.onload = fadeOut();

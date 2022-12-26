@@ -118,6 +118,7 @@ body {
 }
 
 .loader {
+    transition: all 0.7s linear;
     position: fixed;
     top: 0;
     left: 0;
@@ -143,7 +144,6 @@ body {
 }
 
 .loader.fade-out {
-    top: 110%;
     opacity: 0;
 }
 
